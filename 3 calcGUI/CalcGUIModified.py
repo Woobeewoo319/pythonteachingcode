@@ -14,7 +14,7 @@ class Application(Frame):
         :param master: root.Tk()
         """
         Frame.__init__(self, master)
-        self.entry = Entry(master, width=32, font=("Brush Script MT",25))
+        self.entry = Entry(master, width=24, font=("Arial",25))
         self.entry.grid(row=0, column=0, columnspan=6, sticky="w")
         self.entry.focus_set()
         self.entry.configure(state="disabled", disabledbackground="white", disabledforeground="black")
@@ -118,7 +118,7 @@ class Application(Frame):
         """
         master.bind("<Return>", lambda event, btn=self.eq_bttn: self.flash(btn))
         master.bind("<BackSpace>", lambda event, btn=self.c_bttn: self.flash(btn))
-        master.bind("9", lambda event, char="9", btn=self.nine_bttn: self.add_chr(char, btn))
+        master.bind("9", lambda event, char="JC", btn=self.nine_bttn: self.add_chr(char, btn))
         master.bind("8", lambda event, char="8", btn=self.eight_bttn: self.add_chr(char, btn))
         master.bind("7", lambda event, char="7", btn=self.seven_bttn: self.add_chr(char, btn))
         master.bind("6", lambda event, char="6", btn=self.six_bttn: self.add_chr(char, btn))
@@ -174,7 +174,7 @@ class Application(Frame):
         self.eight_bttn = Button(self, text="8", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr(8))
         self.eight_bttn.grid(row=1, column=1)
 
-        self.nine_bttn = Button(self, text="9", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr(9))
+        self.nine_bttn = Button(self, text="Jordan", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr("Cohen"))
         self.nine_bttn.grid(row=1, column=2)
 
         self.four_bttn = Button(self, text="4", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr(4))
